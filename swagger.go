@@ -164,9 +164,7 @@ func EchoWrapHandler(options ...func(*Config)) echo.HandlerFunc {
 		case "doc.json":
 			doc, err := swag.ReadDoc(config.InstanceName)
 			if err != nil {
-				//c.Error(err)
-
-				return nil
+				return c.JSON(http.StatusInternalServerError, echo.Map{"message": http.StatusText(http.StatusInternalServerError)})
 			}
 
 			_, _ = c.Response().Writer.Write([]byte(doc))
