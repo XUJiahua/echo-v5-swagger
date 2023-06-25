@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v5"
 	swaggerFiles "github.com/swaggo/files/v2"
 	"github.com/swaggo/swag"
 )
@@ -164,7 +164,7 @@ func EchoWrapHandler(options ...func(*Config)) echo.HandlerFunc {
 		case "doc.json":
 			doc, err := swag.ReadDoc(config.InstanceName)
 			if err != nil {
-				c.Error(err)
+				//c.Error(err)
 
 				return nil
 			}

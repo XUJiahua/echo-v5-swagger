@@ -3,7 +3,7 @@ module github.com/swaggo/echo-swagger
 go 1.17
 
 require (
-	github.com/labstack/echo/v4 v4.9.0
+	github.com/labstack/echo/v5 v5.0.0-20220201181537-ed2888cfa198
 	github.com/stretchr/testify v1.7.0
 	github.com/swaggo/files/v2 v2.0.0
 	github.com/swaggo/swag v1.8.12
